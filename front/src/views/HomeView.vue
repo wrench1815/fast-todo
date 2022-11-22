@@ -2,6 +2,7 @@
 import type { AxiosStatic } from 'axios';
 import TaskList from '@/components/TaskList.vue';
 import { inject, onMounted, ref } from 'vue';
+import AddTask from '@/components/AddTask.vue';
 
 const tasks = ref([]);
 const loading = ref(true);
@@ -31,8 +32,16 @@ onMounted(() => {
 <template>
   <main class="container">
     <div class="d-flex justify-content-end my-4">
-      <button class="btn btn-primary btn-rounded">Add task</button>
+      <button
+        class="btn btn-primary btn-rounded"
+        data-mdb-toggle="modal"
+        data-mdb-target="#AddTask"
+      >
+        Add task
+      </button>
     </div>
     <TaskList :tasks="tasks" @refresh-todo="refreshTasks" />
   </main>
+
+  <AddTask @task-add="refreshTasks" />
 </template>
