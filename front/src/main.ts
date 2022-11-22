@@ -1,11 +1,19 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
-import './assets/main.css'
+import './assets/main.css';
 
-const app = createApp(App)
+import axios from './plugins/axios';
 
-app.use(router)
+import * as mdb from 'mdb-ui-kit';
+import 'mdb-ui-kit/css/mdb.min.css';
 
-app.mount('#app')
+const app = createApp(App);
+
+app.use(router, mdb);
+app.use(axios, {
+  baseUrl: 'http://localhost:8000',
+});
+
+app.mount('#app');
