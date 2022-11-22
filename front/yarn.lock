@@ -1976,6 +1976,11 @@ vite@^3.1.8:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-axios@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/vue-axios/-/vue-axios-3.5.2.tgz#28637524cca550a9e97197e85a41930ec63604d5"
+  integrity sha512-GP+dct7UlAWkl1qoP3ppw0z6jcSua5/IrMpjB5O8bh089iIiJ+hdxPYH2NPEpajlYgkW5EVMP95ttXWdas1O0g==
+
 vue-eslint-parser@^9.0.0, vue-eslint-parser@^9.0.1:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-9.1.0.tgz#0e121d1bb29bd10763c83e3cc583ee03434a9dd5"
