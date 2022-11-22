@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { inject } from 'vue';
+import NoData from './NoData.vue';
 import type { AxiosStatic } from 'axios';
 const axios = inject('axios') as AxiosStatic;
 
@@ -18,7 +19,9 @@ function formattedDate(inputDate: string) {
   const date = new Date(inputDate);
   return `${date.toLocaleString('default', {
     weekday: 'short',
-  })}, ${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
+  })}, ${date.getDate()}-${
+    date.getMonth() + 1
+  }-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
 }
 
 function markDone(id: number) {
@@ -74,6 +77,9 @@ function deleteTask(id: number) {
               <div class="d-flex gap-2">
                 <button
                   class="btn btn-rounded btn-floating text-info d-flex align-items-center justify-content-center"
+                  :class="{
+                    disabled: task.is_completed,
+                  }"
                   @click="markDone(task.id)"
                 >
                   <i class="ri-check-double-fill fw-bold fs-5"></i>

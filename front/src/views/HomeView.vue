@@ -53,39 +53,40 @@ onMounted(() => {
       <div class="card-body">
         <h5 class="card-title">Filters</h5>
 
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="filterRadios"
-            id="all"
-            value="all"
-            v-model="filter"
-          />
-          <label class="form-check-label" for="all"> All </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="filterRadios"
-            id="completed"
-            value="completed"
-            v-model="filter"
-          />
-          <label class="form-check-label" for="completed"> Completed </label>
-        </div>
-
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="filterRadios"
-            id="pending"
-            value="pending"
-            v-model="filter"
-          />
-          <label class="form-check-label" for="pending"> Pending </label>
+        <div class="d-flex gap-2">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="filterRadios"
+              id="all"
+              value="all"
+              v-model="filter"
+            />
+            <label class="form-check-label" for="all"> All </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="filterRadios"
+              id="completed"
+              value="completed"
+              v-model="filter"
+            />
+            <label class="form-check-label" for="completed"> Completed </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="filterRadios"
+              id="pending"
+              value="pending"
+              v-model="filter"
+            />
+            <label class="form-check-label" for="pending"> Pending </label>
+          </div>
         </div>
 
         <button
