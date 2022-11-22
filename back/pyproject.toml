@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "back"
+version = "0.1.0"
+description = ""
+authors = ["wrench1815 <hardeepkumar1815@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.87.0"
+uvicorn = "^0.20.0"
+sqlalchemy = "^1.4.44"
+
+
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.32.0"
+toml = "^0.10.2"
+
+[tool.yapf]
+based_on_style = "pep8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
